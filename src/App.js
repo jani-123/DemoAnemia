@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Welcome from './welcome';
 import Notificaciones from './Notificaciones';
-
+import Home from './home';
 import {
 	BrowserRouter,
 	Route,
@@ -21,10 +21,12 @@ const App =()=> {
 		<div>
 			<Switch>
 				{/* <Route exact path="/" render={() => <Redirect to= {'/home'}/>}/> */}
-				{/* <Route  path="/home" render={() => <Home/>}/> */}
-        {/* <Route  exact path="/" render={() => <Welcome/>}/> */}
+
+				<Route  path="/home" render={() => <Home/>}/>
+        <Route  exact path="/" render={() => <Welcome/>}/> 
         <Route  exact path="/" render={() => <Notificaciones/>}/>
 				<Route component={NotFound}/>
+				<Route component={Home}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
