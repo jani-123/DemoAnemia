@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Welcome from './welcome';
-import Notificaciones from './Notificaciones';
-import Home from './home';
+import Login from './login.js'
+import Welcome from './welcome.js';
+import Home from './home.js';
+import ReminderApp from './reminder.js';
 import {
 	BrowserRouter,
 	Route,
@@ -16,17 +17,18 @@ const NotFound = () => {
 	);
 }
 
-const App =()=> {
-  return (<BrowserRouter>
+const App = () => {
+	return (<BrowserRouter>
 		<div>
 			<Switch>
 				{/* <Route exact path="/" render={() => <Redirect to= {'/home'}/>}/> */}
-
-				<Route  path="/home" render={() => <Home/>}/>
-        <Route  exact path="/" render={() => <Welcome/>}/> 
-        <Route  exact path="/" render={() => <Notificaciones/>}/>
-				<Route component={NotFound}/>
-				<Route component={Home}/>
+				<Route exact path="/" render={() => <Login />} />
+				<Route exact path="/welcome" render={() => <Welcome />} />
+				<Route exact path="/home" render={() => <Home />} />
+				<Route exact path="/reminder" render={() => <ReminderApp />} />
+				{/* <Route exact path="/" render={() => <Notificaciones />} /> */}
+				
+				<Route component={Login} />
 			</Switch>
 		</div>
 	</BrowserRouter>)

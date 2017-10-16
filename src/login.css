@@ -1,0 +1,68 @@
+*{
+	/*outline: 1px solid green;*/
+	/* background-color: #1ABC9C; */
+	/*font-family: 'Roboto', sans-serif;*/
+	
+	font-family: 'Boogaloo', cursive;
+}
+.login{
+	background-image: url('./img/fondo2.jpg');
+	
+}
+#ayuda{
+	margin-top: 20px;
+	color: white;
+	font-size: 30px;
+	float: right;
+}
+.bebe-logo{
+    margin-top: 50px;
+    width: 60%;
+    border: 6px solid wheat;
+    height: 70px;
+    border-radius: 50%;
+}
+/* .img-transparent{
+	background-color: rgb(23, 16, 44);
+} */
+.letra-1{
+	color: white;
+	/*margin-top:200px; */
+}
+.letra-2{
+	color: white;
+	
+}
+.letra-3{
+	color: white;
+	/*margin-top: 100px:*/
+	margin-top: 50px;
+}
+.hr {
+    width: 10%0;
+    height: 2px;
+    border: none;
+    border-radius: 2px;
+    /* font-size: 10px; */
+    background-color: rgba(231, 223, 219, 0.3);
+}
+.iniciar {
+    font-weight: inherit;
+	color: white;
+	margin: 5%;
+}
+
+#input-1 {
+    /* padding: 5px; */
+    height: 40px;
+    border-radius: 3px;
+}
+
+#button {
+    padding: 3% 8%;
+    background-color: rgba(22, 187, 65, 0.79);
+    color: #f1eaea;
+    border: none;
+    padding: 3% 10%;
+    margin: 10% 10%;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Utils from './Utils.js';
-import './App.css';
+import './home.css';
 import {
   BrowserRouter,
   Route,
@@ -9,22 +9,11 @@ import {
   Redirect
 } from 'react-router-dom'
 
-// class CalendarModel extends Component{
-//   constructor(props){
-//      super(props);
-//      this.state = {
-//         active : false
-//      }
-//   }
-//   render(){
-//     const dias = () =>{
-//       let dias = [];
-//     }
-//   }
-
-
-// }
-const Nav = () => {
+const Nav = () =>
+{
+  const logoutSession=(e)=>{
+    e.preventDefault(); document.getElementById('logout-form').submit();
+  }
   return (
     <nav className="navbar navbar-menu">
       <div className="container-fluid">
@@ -35,14 +24,16 @@ const Nav = () => {
             <span className="icon-bar" />
             <span className="icon-bar" />
           </button>
-          <a className="navbar-brand title" href="#">MisChispitas</a>
+          <a className="navbar-brand title" href="home">MisChispitas</a>
         </div>
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav">
-            <li className="active"><a href="#">Home<span className="sr-only">(current)</span></a></li>
-            <li><a href="#">Recordatorios</a></li>
-            <li><a href="#">Ayudar</a></li>
-            <li><a href="#">Salir</a></li>
+            <li className="active"><NavLink to={"/welcome"}>Welcome<span className="sr-only">(current)</span></NavLink></li>
+            <li><NavLink to={"/reminder"}>Recordatorios</NavLink></li>
+
+            <li><NavLink to={"/login"}>Salir</NavLink>
+
+            </li>
           </ul>
         </div>
       </div>
@@ -55,7 +46,7 @@ const Avatar = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-          <img src="https://static.guiainfantil.com/pictures/84-4-la-evolucion-del-bebe-y-su-entorno-primer-mes.jpg" className="logo" />
+          <img id="logo" src="https://static.guiainfantil.com/pictures/84-4-la-evolucion-del-bebe-y-su-entorno-primer-mes.jpg" className="logo" />
         </div>
       </div>
     </div>
@@ -99,19 +90,110 @@ const Calendar = () => {
   {
     fecha: "22/2017",
     estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
+  },
+  {
+    fecha: "22/2017",
+    estado: false
   }
   ];
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 mes">
-          <h3>{title}</h3>
+        <div id="mes" className="col-md-12 col-sm-12 col-xs-12 col-lg-12 mes">
+          <h3>
+            <span className="cmpd glyphicon glyphicon-chevron-left pull-left"></span>
+            {title}
+            <span className="cmpd glyphicon glyphicon-chevron-right pull-right"></span>
+          </h3>
           <div className="row">
             {
               dias.map((item, index) => {
-                console.log(index);
                 return (
-                  <Dias key={Utils.uuid()} item={item} index={index} />
+                  <Dias key={Utils.uuid()} item={item} index={index +1 } />
                 )
               })
             }
@@ -121,24 +203,32 @@ const Calendar = () => {
     </div>
   )
 }
+
 const Dias = ({ item, index }) => {
   const eventDia = (e) => {
     console.log(e);
   }
-  console.log("segundo", index);
   return (
-    <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 dias">
-      <span key={index} onClick={eventDia}>{index}</span>
+    <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 dias test-center">
+      <span key={index} onClick={eventDia} id="span">{index}</span>
     </div>
   )
 }
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Nav />
       <Avatar />
       <Calendar />
+      <div className="row news">
+        <div className="col-xs-2">
+          <img src="./img/noty.png" className="noty" />
+        </div>
+        <div className="col-xs-10">
+          <p>Eres una mamá que se preocupa por su niño, sigue así.</p>
+        </div>
+      </div>
     </div>
   )
 }

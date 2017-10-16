@@ -1,0 +1,50 @@
+.reminder{
+    background-color: #1ABC9C;
+  }
+
+.logo{
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-left: 23%;
+  }
+  .navbar-menu{
+    font-family: 'Boogaloo', cursive;
+  }
+  .navbar-menu span{
+    background-color: #fff;
+    color: #fff !important;
+  }
+
+.noty{
+	width: 40px;
+}
+.fechitas{
+	margin: 0;
+}
+.diasemana{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgba(0,0,0,.5);
+	cursor:pointer;
+}
+.diasemana:hover{
+	background-color: #DEDEDE;
+
+}
+
+.green{
+	background-color: #41CD2A !important;
+}
+.orange{
+	background-color: #CD922A !important;
+}
+.danger{
+	background-color: #D83C3C !important;
+}
+
+.inp{
+	border: none;
+	padding: 5px;
+}
