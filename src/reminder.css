@@ -10,6 +10,11 @@
 	border-radius: 50%;
 	/* padding: 5%; */
 }
+.textalrt {
+    margin-top: 4%;
+    /* margin: 5% 1%; */
+    color: antiquewhite;
+}
 .green{
 	background-color: #1A9102 !important;
 }
