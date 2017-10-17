@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Utils from './Utils.js';
-import './reminder.css';
+import './nurse.css';
 import {
     BrowserRouter,
     Route,
@@ -39,66 +39,95 @@ const Nav = () => {
 }
 
 const Reminders = () => {
-    let title = "Recordatorios";
+    let title = "Usuarios";
     let recordatorios = [
         {
-            nota: "Cuida y alimenta a tu niño",
-            semaforo: 1 //verde
+            fecha: "Maria",
+            estado: 'green'
         },
         {
-            nota: "Tu niño necesita alimentarse",
-            semaforo: 2//orange
+            fecha: "Magadalena",
+            estado: 'green'
         },
         {
-            nota: "Una receta muy nutritiva",
-            semaforo: 1//rojo
+            fecha: "Frida",
+            estado: 'orange'
         },
         {
-            nota: "Sabes que tu niño necesita alimentarse...",
-            semaforo: 2
+            fecha: "Angelica",
+            estado: 'green'
         },
         {
-            nota: "Si tu niño se siente mal, rápido al centro de salud",
-            semaforo: 3
+            fecha: "Eva",
+            estado: 'danger'
         },
         {
-            nota: "Recuerda alimentar a tu niño",
-            semaforo: 1
+            fecha: "Carla",
+            estado: 'green'
         }, {
-            nota: "Cuida y alimenta a tu niño",
-            semaforo: 1
-        },
-        {
-            nota: "Tu niño necesita alimentarse",
-            semaforo: 2
-        },
-        {
-            nota: "Una receta muy nutritiva",
-            semaforo: 1
-        },
-        {
-            nota: "Sabes que tu niño necesita alimentarse...",
-            semaforo: 2
-        },
-        {
-            nota: "Si tu niño se siente mal, rápido al centro de salud",
-            semaforo: 3
-        },
-        {
-            nota: "Recuerda alimentar a tu niño",
-            semaforo: 1
+            fecha: "Rebeca",
+            estado: 'orange'
         }, {
-            nota: "Cuida y alimenta a tu niño",
-            semaforo: 2
+            fecha: "Maria",
+            estado: 'green'
         },
         {
-            nota: "Tu niño necesita alimentarse",
-            semaforo: 1
-        }
+            fecha: "Magadalena",
+            estado: 'green'
+        },
+        {
+            fecha: "Frida",
+            estado: 'orange'
+        },
+        {
+            fecha: "Angelica",
+            estado: 'green'
+        },
+        {
+            fecha: "Eva",
+            estado: 'danger'
+        },
+        {
+            fecha: "Carla",
+            estado: 'green'
+        }, {
+            fecha: "Rebeca",
+            estado: 'orange'
+        }, {
+            fecha: "Maria",
+            estado: 'green'
+        },
+        {
+            fecha: "Magadalena",
+            estado: 'green'
+        },
+        {
+            fecha: "Frida",
+            estado: 'orange'
+        },
+        {
+            fecha: "Angelica",
+            estado: 'green'
+        },
+        {
+            fecha: "Eva",
+            estado: 'danger'
+        },
+        {
+            fecha: "Carla",
+            estado: 'green'
+        }, {
+            fecha: "Rebeca",
+            estado: 'orange'
+        },
     ];
     return (
         <div className="container">
             <div className="row">
+                <div className="col-xs-12">
+                    <div className="col-xs-3"><b>Buscar</b></div>
+                    <input className="inp col-xs-9" type="text" />
+                </div>
                 <div id="mes" className="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                     <h3>
                         {title}
@@ -124,32 +153,32 @@ const Reminder = ({ item, index }) => {
         <div>
 
             {
-                item.semaforo === 1 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center green">
+                item.estado === 'green' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center verde">
                     <div className="col-xs-2">
                         <img src='./img/noty.png' className="noty" />
                     </div>
                     <div className="col-xs-10">
-                        <h4 className="flechitas"><b>{item.nota}</b></h4>
+                        <h4 className="flechitas"><b>{item.fecha}</b></h4>
                         <p>Hola....</p>
                     </div>
                 </div>
                     :
-                    item.semaforo === 2 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center orange">
+                    item.estado === 'orange' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center naranja">
                         <div className="col-xs-2">
                             <img src='./img/noty.png' className="noty" />
                         </div>
                         <div className="col-xs-10">
-                            <h4 className="flechitas"><b>{item.nota}</b></h4>
+                            <h4 className="flechitas"><b>{item.fecha}</b></h4>
                             <p>Hola....</p>
                         </div>
                     </div>
                         :
-                        item.semaforo === 3 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center danger">
+                        item.estado === 'danger' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center rojo">
                             <div className="col-xs-2">
                                 <img src='./img/noty.png' className="noty" />
                             </div>
                             <div className="col-xs-10">
-                                <h4 className="flechitas"><b>{item.nota}</b></h4>
+                                <h4 className="flechitas"><b>{item.fecha}</b></h4>
                                 <p>Hola....</p>
                             </div>
                         </div>

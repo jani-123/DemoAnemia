@@ -1,0 +1,31 @@
+.noty{
+	width: 40px;
+}
+h4{
+	margin: 0;
+}
+.dias{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgba(0,0,0,.5);
+	cursor:pointer;
+}
+.dias:hover{
+	background-color: #DEDEDE;
+
+}
+
+.verde{
+	background-color: #41CD2A !important;
+}
+.naranja{
+	background-color: #CD922A !important;
+}
+.rojo{
+	background-color: #D83C3C !important;
+}
+
+.inp{
+	border: none;
+	padding: 5px;
+}
