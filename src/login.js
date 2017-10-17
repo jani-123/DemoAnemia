@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import Utils from './Utils.js';
 import './login.css';
 import {
-	BrowserRouter,
-	Route,
-	Switch,
 	NavLink,
-	Redirect
 } from 'react-router-dom'
 
 class Login extends Component {
@@ -19,25 +15,26 @@ class Login extends Component {
 	}
 
 	getUsers(e) {
-		if ((e.target.value.length === 8 && this.state.user === 'Madre' || this.state.user === 'Enfermera')) {
+		if ((e.target.value.length === 8 && this.state.user === 'Madre' || e.target.value.length === 8 && this.state.user === 'Enfermera')) {
 			this.setState({
 				active: true
 			});
 		}
-		else
+		else {
 			this.setState({
 				active: false
 			});
+		}
 	}
 
-	selectUsers(e) {
-		let n = e.currentTarget.id;
-		this.setState({
-			user: n
-		})
-		console.log(this.state.user);
-	}
-	render() {
+	render() {		
+		const selectUsers = (e) => {
+			let n = e.currentTarget.id;
+			console.log('n', n);
+			this.setState({
+				user: n
+			})
+		}
 		return (
 			<center>
 				<div className="container login">
@@ -57,16 +54,16 @@ class Login extends Component {
 										<div className="input-group-btn">
 											<button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User: {this.state.user}<span className="caret" /></button>
 											<ul className="dropdown-menu">
-												<li><a href="#" onClick={(e) => this.selectUsers(e)} id="Madre">Madre</a></li>
+												<li><a href="#" onClick={(e) => selectUsers(e)} id="Madre">Madre</a></li>
 												<li role="separator" className="divider" />
-												<li><a href="#" onClick={(e) => this.selectUsers(e)} id="Enfermera">Enfermera</a></li>
+												<li><a href="#" onClick={(e) =>  selectUsers(e)} id="Enfermera">Enfermera</a></li>
 											</ul>
 										</div>
 										<input type="text" onChange={(e) => this.getUsers(e)} className="form-control" aria-label="..." placeholder="Dni" />
 									</div>
 									{
 										this.state.active ?
-											<NavLink to={'/welcome'} type="submit" className="btn btn-default shake" id="button">Iniciar Sesión</NavLink>
+											<NavLink to={ this.state.user === 'Madre' ? '/welcome': '/nurse'} type="submit" className="btn btn-default shake" id="button">Iniciar Sesión</NavLink>
 											:
 											<NavLink to={'/welcome'} type="submit" className="btn btn-default shake" id="button" disabled>Iniciar Sesión</NavLink>
 									}
