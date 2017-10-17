@@ -23,9 +23,9 @@ const Nav = () => {
                         <span className="icon-bar" />
                         <span className="icon-bar" />
                     </button>
-                    <a className="navbar-brand title" href="home">MisChispitas</a>
+                    <a className="navbar-brand title" href="home">Mis Chispitas</a>
                 </div>
-                <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div className="collapse navbar-collapse deslizar" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav">
                         <li className="active"><NavLink to={"/home"}>Home<span className="sr-only">(current)</span></NavLink></li>
                         <li><NavLink to={"/reminder"}>Recordatorios</NavLink></li>
@@ -126,9 +126,9 @@ const Reminder = ({ item, index }) => {
             {
                 item.semaforo === 1 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center green">
                     <div className="col-xs-3">
-                    <center><img src='https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX5447029.jpg' className="noty" /></center>
+                    <center><img src='https://image.flaticon.com/icons/png/128/417/417625.png' className="noty" /></center>
                     </div>
-                    <div className="col-xs-9">
+                    <div className="col-xs-9 textalrt">
                         <h4 className="flechitas"><b>{item.nota}</b></h4>
                         <p>Hola....</p>
                     </div>
@@ -136,9 +136,9 @@ const Reminder = ({ item, index }) => {
                     :
                     item.semaforo === 2 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center orange">
                         <div className="col-xs-3">
-                        <center><img src='https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX5447029.jpg' className="noty" /></center>
+                        <center><img src='https://image.flaticon.com/icons/png/128/417/417625.png' className="noty" /></center>
                         </div>
-                        <div className="col-xs-9">
+                        <div className="col-xs-9 textalrt">
                             <h4 className="flechitas"><b>{item.nota}</b></h4>
                             <p>Hola....</p>
                         </div>
@@ -146,9 +146,9 @@ const Reminder = ({ item, index }) => {
                         :
                         item.semaforo === 3 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center danger">
                             <div className="col-xs-3">
-                                <center><img src='https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX5447029.jpg' className="noty" /></center>
+                                <center><img src='https://image.flaticon.com/icons/png/128/417/417625.png' className="noty" /></center>
                             </div>
-                            <div className="col-xs-9">
+                            <div className="col-xs-9 textalrt">
                                 <h4 className="flechitas"><b>{item.nota}</b></h4>
                                 <p>Hola....</p>
                             </div>

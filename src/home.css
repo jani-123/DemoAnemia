@@ -15,8 +15,12 @@
   border: 10px solid rgba(218, 212, 201, 0.56);
   border-radius: 50%;
 }
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
-a{
+.deslizar{
   color: white;
   font-size: 2em; 
 }

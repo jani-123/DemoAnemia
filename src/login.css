@@ -2,10 +2,14 @@
     /* font-family: 'Boogaloo', cursive; */
 }
 .login{
-    background-image: url('./img/fondo2.jpg');
+    background-image: url('./img/gol3.jpg');
+    /* background: cover; */
+    /* background-repeat: no-repeat; */
     font-family: 'Boogaloo', cursive;
-    background: cover;
 	color: #EEE6E6;
+}
+.buscador{
+    margin: 5%;
 }
 #ayuda{
 	margin-top: 20px;

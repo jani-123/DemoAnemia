@@ -25,7 +25,7 @@ const Nav = () => {
                     </button>
                     <a className="navbar-brand title" href="home">MisChispitas</a>
                 </div>
-                <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div className="collapse navbar-collapse deslizar" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav">
                         <li className="active"><NavLink to={"/home"}>Home<span className="sr-only">(current)</span></NavLink></li>
                         <li><NavLink to={"/reminder"}>Recordatorios</NavLink></li>
