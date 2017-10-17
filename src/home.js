@@ -189,7 +189,7 @@ const Calendar = () => {
             {title}
             <span className="cmpd glyphicon glyphicon-chevron-right pull-right"></span>
           </h3>
-          <div className="row">
+          <div className="row fecha">
             {
               dias.map((item, index) => {
                 return (

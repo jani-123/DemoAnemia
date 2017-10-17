@@ -19,7 +19,7 @@ const Welcome = () => {
             <h1>Mis chispitas</h1>
             <div className="row">
                 <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12">
-                    <center><img src={imagen} className="img-responsive bbgorrita" alt="Responsive image" /></center>
+                    <center><img src=' https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/14294954_553269731540490_94757999_n.jpg?ig_cache_key=MTMzNDg0MzI2NjIzOTI3NzAyMA%3D%3D.2' className="img-responsive bbgorrita" alt="Responsive image" /></center>
                 </div>
             </div>
             <div className="textobb">

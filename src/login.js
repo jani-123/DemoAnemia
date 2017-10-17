@@ -56,16 +56,23 @@ class Login extends Component {
                                 <div className="form-group">
                                     <input type="number" className="form-control input-1" id="input-1" name="dni" placeholder="D.N.I" onChange={(e) => this.inputDni(e)} required />
                                 </div>
-                                <div className="form-check">
-                                    <label className="form-check-label">
-                                        <input type="checkbox" onChange={(e) => this.checkMom(e)} />Mamá
-                                    </label>
-                                </div>
-                                <div className="form-check valida">
-                                    <label className="form-check-label">
-                                        <input type="checkbox" onChange={(e) => this.checkNurse(e)} />Enfermera</label>
-                                </div>
-                                {
+                                <div className="col-md-12 checket">
+                                    <div className=" col-md-6 col-xs-6">
+                                      <div className="form-check valida">
+                                        <label className="form-check-label">
+                                            <input type="checkbox" onChange={(e) => this.checkMom(e)} />Mamá
+                                        </label>
+                                       </div>
+                                      </div>
+                                      <div className="col-sm-6 col-md-6 col-xs-6">
+                                        <div className="form-check valida">
+                                          <label className="form-check-label">
+                                             <input type="checkbox" onChange={(e) => this.checkNurse(e)} />Enfermera</label>
+                                          </label>
+                                        </div>
+                                      </div>
+                                  </div>
+                            {
                                    this.state.activeMom ? 
                                     <NavLink to={'/welcome'} type="submit" className="btn btn-default shake" id="button">ENTRAR</NavLink>
                                     :
@@ -79,8 +86,8 @@ class Login extends Component {
                                     <NavLink to={'/home'} type="submit" className="btn btn-default shake" id="button" disabled>ENTRAR</NavLink> 
 
                                 }
-                               
-                            </form>
+                        </form>
+
                         </div>
                     </div>
                 </div>
