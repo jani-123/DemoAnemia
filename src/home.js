@@ -15,7 +15,7 @@ const Nav = () =>
     e.preventDefault(); document.getElementById('logout-form').submit();
   }
   return (
-    <nav className="navbar navbar-menu">
+    <nav className="navbar navbar-menu sandwish">
       <div className="container-fluid">
         <div className="navbar-header">
           <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -46,7 +46,7 @@ const Avatar = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-          <img id="logo" src="https://static.guiainfantil.com/pictures/84-4-la-evolucion-del-bebe-y-su-entorno-primer-mes.jpg" className="logo" />
+          <center><img src="https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/14294954_553269731540490_94757999_n.jpg?ig_cache_key=MTMzNDg0MzI2NjIzOTI3NzAyMA%3D%3D.2" className="logo" /></center>
         </div>
       </div>
     </div>

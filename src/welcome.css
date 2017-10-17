@@ -1,23 +1,21 @@
 .welcome{
-    background-color: #1ABC9C;
+    background-image: url('./img/gol3.jpg');
+    background: cover;
+    font-family: 'Boogaloo', cursive;
 }
 h1{
     font-weight: 900;
     text-align: center;
-    font-family: 'Boogaloo', sans-serif !important;
-    /* font-family: arial; */
     color: white;
-    margin: 10% 2%;
 }
 .bbgorrita{
     width: 250px;
     border-radius: 50%;
     border: 8px solid rgba(208, 205, 205, 0.55);
     text-align: center;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 .bbinput{
-    /* margin: 5%; */
     height: 30%;
     padding: 4%;
 }
@@ -35,12 +33,16 @@ h1{
     border-color: #585653;
 }
 .textobb {
-    padding: 10% 5%;
+    padding: 5% 5%;
     letter-spacing: 0.5px;
     font-weight: bold;
     font-family: sans-serif;
-    background-color: rgba(234, 230, 230, 0.58);
+    background-color: rgba(226, 222, 222, 0.58);
 }
 .next{
-    margin-top: 10px;
+    margin: 30px;
+}
+.direction{
+    border-radius:50%; 
+    background-color: rgba(226, 222, 222, 0.58);
 }

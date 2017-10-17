@@ -1,21 +1,21 @@
 .home{
-  background-color: #1ABC9C;
+  background-image: url('./img/gol3.jpg');
+  background: cover;
+  font-family: 'Boogaloo', cursive;
 }
-
+.sandwish{
+  background-color: rgba(13, 1, 27, 0.94);
+}
 #logout-form{
   display: none;
 }
-
-#logo{
-  margin-left: 120px !important;
-}
-.logo{
+.logo {
+  height: 200px;
+  width: 60%;
+  border: 10px solid rgba(218, 212, 201, 0.56);
   border-radius: 50%;
-  margin-left: 50px;
 }
-#mes .cmpd{
-  color: #202020;
-}
+
 a{
   color: white;
   font-size: 2em;
@@ -28,18 +28,18 @@ a{
   border-color: white;
   background-color: white;
   width: 90%;
-  margin: 40px 5%;
+  margin: 5% 5%;
   text-align: center;
   padding-bottom: 10px;
 }
-.dias{ 
-border-radius: 5px;
-border-color: white;
-background-color: #1ABC9C;
-margin: 0 4px 10px;
-width: 30px;
-height: 30px;
-display: inline-block;
+.dias {
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgb(122, 193, 31);
+  padding: 1%;
+  margin: 1%;
+  width: 30px;
+  height: 30px;
 }
 #span{
   color: #fff;
@@ -56,13 +56,6 @@ display: inline-block;
 .noty{
   width: 50px;
 }
-.logo{
-    width: 150px;
-    height: 150px;
-    background-repeat: no-repeat;
-    margin-top: 20px;
-    margin-left: 23%;
-  }
   .navbar-menu{
     font-family: 'Boogaloo', cursive;
   }
