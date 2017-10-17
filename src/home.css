@@ -63,3 +63,6 @@ a{
     background-color: #fff;
     color: #fff !important;
   }
+  .color{
+    background-color: blue;
+  }
