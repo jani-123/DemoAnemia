@@ -10,9 +10,6 @@ import {
 } from 'react-router-dom'
 
 const Nav = () => {
-  const logoutSession = (e) => {
-    e.preventDefault(); document.getElementById('logout-form').submit();
-  }
   return (
     <nav className="navbar navbar-menu sandwish">
       <div className="container-fluid">
@@ -29,9 +26,7 @@ const Nav = () => {
           <ul className="nav navbar-nav">
             <li className="active"><NavLink to={"/welcome"}>Welcome<span className="sr-only">(current)</span></NavLink></li>
             <li><NavLink to={"/reminder"}>Recordatorios</NavLink></li>
-
             <li><NavLink to={"/login"}>Salir</NavLink>
-
             </li>
           </ul>
         </div>
@@ -54,129 +49,129 @@ const Avatar = () => {
 
 const Calendar = () => {
   let title = "Octubre";
-  let dias = [{
-    fecha: "20-2017",
-    estado: true
+  let days = [{
+    date: "20-2017",
+    state: true
   },
   {
-    fecha: "21/2017",
-    estado: true
+    date: "21/2017",
+    state: true
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "21/2017",
-    estado: true
+    date: "21/2017",
+    state: true
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "21/2017",
-    estado: true
+    date: "21/2017",
+    state: true
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "21/2017",
-    estado: true
+    date: "21/2017",
+    state: true
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   },
   {
-    fecha: "22/2017",
-    estado: false
+    date: "22/2017",
+    state: false
   }
   ];
   return (
@@ -190,9 +185,9 @@ const Calendar = () => {
           </h3>
           <div className="row fecha">
             {
-              dias.map((item, index) => {
+              days.map((item, index) => {
                 return (
-                  <Dias key={Utils.uuid()} item={item} index={index + 1} />
+                  <DaysDate key={Utils.uuid()} item={item} index={index + 1} />
                 )
               })
             }
@@ -203,24 +198,23 @@ const Calendar = () => {
   )
 }
 
-const Dias = ({ item, index }) => {
+const DaysDate = ({ item, index }) => {
   const eventDia = (e) => {
     console.log(index);
-    return(
+    return (
       <div>
-        { index ?
+        {index ?
           <span key={index} id="span" data-toggle="modal" data-target="#myModal" className="color">{index}</span>
           :
           <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
         }
       </div>
     )
-    
+
   }
 
   return (
     <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 dias test-center">
-
       <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
       <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div className="modal-dialog" role="document">
