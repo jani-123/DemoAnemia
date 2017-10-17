@@ -14,27 +14,16 @@ const Nav = () => {
         e.preventDefault(); document.getElementById('logout-form').submit();
     }
     return (
-        <nav className="navbar navbar-menu">
-            <div className="container-fluid">
-                <div className="navbar-header">
-                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span className="sr-only">Toggle navigation</span>
-                        <span className="icon-bar" />
-                        <span className="icon-bar" />
-                        <span className="icon-bar" />
-                    </button>
+        <div className="row">
+            <div className="col-lg-12">
+                <div className="col-md-10">
                     <a className="navbar-brand title" href="home">MisChispitas</a>
                 </div>
-                <div className="collapse navbar-collapse deslizar" id="bs-example-navbar-collapse-1">
-                    <ul className="nav navbar-nav">
-                        <li className="active"><NavLink to={"/home"}>Home<span className="sr-only">(current)</span></NavLink></li>
-                        <li><NavLink to={"/reminder"}>Recordatorios</NavLink></li>
-                        <li><NavLink to={"/login"}>Salir</NavLink></li>
-                        <li><NavLink to={"/nurse"}>Nurse</NavLink></li>
-                    </ul>
+                <div className="col-xs-2 room">
+                    <span className="glyphicon glyphicon-home room2" />
                 </div>
             </div>
-        </nav>
+        </div>
     );
 }
 
@@ -124,25 +113,24 @@ const Reminders = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-xs-12">
-                    <div className="col-xs-3"><b>Buscar</b></div>
-                    <input className="inp col-xs-9" type="text" />
-                </div>
-                <div id="mes" className="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                    <h3>
-                        {title}
-                    </h3>
-                    <div className="row">
-                        {
-                            recordatorios.map((item, index) => {
-                                return (
-                                    <Reminder key={Utils.uuid()} item={item} index={index + 1} />
-
-                                )
-                            })
-                        }
+                <div className="col-lg-12">
+                    <div className="input-group search">
+                        <input type="text" className="form-control" aria-label="..." />
+                        <div className="input-group-btn ">
+                            <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span className="glyphicon glyphicon-search" aria-hidden="true" />
+                            </button>
+                        </div>
                     </div>
                 </div>
+                {
+                    recordatorios.map((item, index) => {
+                        return (
+
+                            <Reminder key={Utils.uuid()} item={item} index={index + 1} />
+                        )
+                    })
+                }
             </div>
         </div>
     )
@@ -153,9 +141,9 @@ const Reminder = ({ item, index }) => {
         <div>
 
             {
-                item.estado === 'green' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center verde">
+                item.estado === 'green' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center verde baby">
                     <div className="col-xs-2">
-                        <img src='./img/noty.png' className="noty" />
+                        <img src='https://s-media-cache-ak0.pinimg.com/originals/41/1b/af/411baf25085c2ea169f1458ab47b7e65.png' className="noty" />
                     </div>
                     <div className="col-xs-10">
                         <h4 className="flechitas"><b>{item.fecha}</b></h4>
@@ -163,9 +151,9 @@ const Reminder = ({ item, index }) => {
                     </div>
                 </div>
                     :
-                    item.estado === 'orange' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center naranja">
+                    item.estado === 'orange' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center naranja baby">
                         <div className="col-xs-2">
-                            <img src='./img/noty.png' className="noty" />
+                            <img src='https://s-media-cache-ak0.pinimg.com/originals/41/1b/af/411baf25085c2ea169f1458ab47b7e65.png' className="noty" />
                         </div>
                         <div className="col-xs-10">
                             <h4 className="flechitas"><b>{item.fecha}</b></h4>
@@ -173,9 +161,9 @@ const Reminder = ({ item, index }) => {
                         </div>
                     </div>
                         :
-                        item.estado === 'danger' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center rojo">
+                        item.estado === 'danger' ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center rojo baby">
                             <div className="col-xs-2">
-                                <img src='./img/noty.png' className="noty" />
+                                <img src='https://s-media-cache-ak0.pinimg.com/originals/41/1b/af/411baf25085c2ea169f1458ab47b7e65.png' className="noty" />
                             </div>
                             <div className="col-xs-10">
                                 <h4 className="flechitas"><b>{item.fecha}</b></h4>

@@ -4,25 +4,44 @@
 h4{
 	margin: 0;
 }
-.dias{
+/* .dias{
 	padding-bottom: 10px;
 	padding-top: 10px;
 	border-bottom: 1px solid rgba(0,0,0,.5);
 	cursor:pointer;
-}
-.dias:hover{
+} */
+/* .dias:hover{
 	background-color: #DEDEDE;
 
+} */
+.baby {
+    margin: 1px solid white;
+    margin: 1px;
+    color: white;
+    padding: 3%;
 }
-
+.reminder{
+	background-color: black;
+}
+.room{
+	color: white;
+    margin: 5%;
+}
+.room2{
+    margin-left: 200%;
+	font-weight: 900;
+}
+.search{
+	margin-bottom: 5%;
+}
 .verde{
-	background-color: #41CD2A !important;
+	background-color: #1A9102 !important;
 }
 .naranja{
-	background-color: #CD922A !important;
+	background-color: #EC700B !important;
 }
 .rojo{
-	background-color: #D83C3C !important;
+	background-color: #C70303 !important;
 }
 
 .inp{
