@@ -9,9 +9,8 @@ import {
   Redirect
 } from 'react-router-dom'
 
-const Nav = () =>
-{
-  const logoutSession=(e)=>{
+const Nav = () => {
+  const logoutSession = (e) => {
     e.preventDefault(); document.getElementById('logout-form').submit();
   }
   return (
@@ -193,7 +192,7 @@ const Calendar = () => {
             {
               dias.map((item, index) => {
                 return (
-                  <Dias key={Utils.uuid()} item={item} index={index +1 } />
+                  <Dias key={Utils.uuid()} item={item} index={index + 1} />
                 )
               })
             }
@@ -206,11 +205,40 @@ const Calendar = () => {
 
 const Dias = ({ item, index }) => {
   const eventDia = (e) => {
-    console.log(e);
+    console.log(index);
+    return(
+      <div>
+        { index ?
+          <span key={index} id="span" data-toggle="modal" data-target="#myModal" className="color">{index}</span>
+          :
+          <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
+        }
+      </div>
+    )
+    
   }
+
   return (
     <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 dias test-center">
-      <span key={index} onClick={eventDia} id="span">{index}</span>
+
+      <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
+      <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 className="modal-title" id="myModalLabel">Recordatorio</h4>
+            </div>
+            <div className="modal-body">
+              Recuerda Darle los micro nutrientes a tu niño #sinAnemia
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
