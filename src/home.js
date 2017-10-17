@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import Utils from './Utils.js';
 import './home.css';
 import {
-  BrowserRouter,
-  Route,
-  Switch,
   NavLink,
-  Redirect
 } from 'react-router-dom'
 
 const Nav = () => {
@@ -199,19 +195,19 @@ const Calendar = () => {
 }
 
 const DaysDate = ({ item, index }) => {
-  const eventDia = (e) => {
-    console.log(index);
-    return (
-      <div>
-        {index ?
-          <span key={index} id="span" data-toggle="modal" data-target="#myModal" className="color">{index}</span>
-          :
-          <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
-        }
-      </div>
-    )
+  // const eventDia = (e) => {
+  //   console.log(index);
+  //   return (
+  //     <div>
+  //       {index ?
+  //         <span key={index} id="span" data-toggle="modal" data-target="#myModal" className="color">{index}</span>
+  //         :
+  //         <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
+  //       }
+  //     </div>
+  //   )
 
-  }
+  // }
 
   return (
     <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 dias test-center">

@@ -11,7 +11,7 @@ import {
 	NavLink,
 	Redirect
 } from 'react-router-dom';
- // Initialize Firebase
+// firebase.initializeApp
 //  var config = {
 //     apiKey: "AIzaSyCzhuaNc9cWsMr8lEWrrL-jPwVuauiwxC0",
 //     authDomain: "demoanemia.firebaseapp.com",
@@ -26,8 +26,9 @@ const App = () => {
 	return (<BrowserRouter>
 		<div>
 			<Switch>
-				{/* <Route exact path="/" render={() => <Redirect to= {'/home'}/>}/> */}
-				<Route exact path="/" render={() => <Login />} />
+				<Route exact path="/DemoAnemia" render={ () => <Redirect to='/login'/> } />
+				<Route exact path="/" render={ () => <Redirect to='/login'/> } />
+				<Route exact path="/login" render={() => <Login />} />
 				<Route exact path="/welcome" render={() => <Welcome />} />
 				<Route exact path="/home" render={() => <Home />} />
 				<Route exact path="/reminder" render={() => <ReminderApp />} />
@@ -39,5 +40,3 @@ const App = () => {
 }
 
 export default App;
-// http://data.whicdn.com/images/29672343/original.jpg
-// https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/14294954_553269731540490_94757999_n.jpg?ig_cache_key=MTMzNDg0MzI2NjIzOTI3NzAyMA%3D%3D.2
