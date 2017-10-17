@@ -49,7 +49,7 @@ const Reminders = () => {
             semaforo: 2//orange
         },
         {
-            nota: "Una receta muy nutritiva",
+            nota: "Una receta muy nutritiva para tu bb",
             semaforo: 1//rojo
         },
         {
@@ -97,7 +97,7 @@ const Reminders = () => {
     ];
     return (
         <div className="container">
-            <div className="row">
+            <div className="row recort">
                 <div id="mes" className="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                     <h3>
                         {title}
@@ -124,30 +124,30 @@ const Reminder = ({ item, index }) => {
 
             {
                 item.semaforo === 1 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center green">
-                    <div className="col-xs-2">
-                        <img src='./img/noty.png' className="noty" />
+                    <div className="col-xs-3">
+                    <center><img src='https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX5447029.jpg' className="noty" /></center>
                     </div>
-                    <div className="col-xs-10">
+                    <div className="col-xs-9">
                         <h4 className="flechitas"><b>{item.nota}</b></h4>
                         <p>Hola....</p>
                     </div>
                 </div>
                     :
                     item.semaforo === 2 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center orange">
-                        <div className="col-xs-2">
-                            <img src='./img/noty.png' className="noty" />
+                        <div className="col-xs-3">
+                        <center><img src='https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX5447029.jpg' className="noty" /></center>
                         </div>
-                        <div className="col-xs-10">
+                        <div className="col-xs-9">
                             <h4 className="flechitas"><b>{item.nota}</b></h4>
                             <p>Hola....</p>
                         </div>
                     </div>
                         :
                         item.semaforo === 3 ? <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 diasemana test-center danger">
-                            <div className="col-xs-2">
-                                <img src='./img/noty.png' className="noty" />
+                            <div className="col-xs-3">
+                                <center><img src='https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX5447029.jpg' className="noty" /></center>
                             </div>
-                            <div className="col-xs-10">
+                            <div className="col-xs-9">
                                 <h4 className="flechitas"><b>{item.nota}</b></h4>
                                 <p>Hola....</p>
                             </div>
@@ -155,11 +155,8 @@ const Reminder = ({ item, index }) => {
                             :
                             false
             }
-
         </div>
     )
-
-
 }
 
 const ReminderApp = () => {

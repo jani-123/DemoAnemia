@@ -1,7 +1,8 @@
-body{
-    background-color: #1ABC9C;
-  }
-  
+
+  .recort {
+    background-color: black;
+    border: 1px solid rgba(208, 64, 123, 0);
+}
   .logo{
     width: 100px;
     height: 100px;

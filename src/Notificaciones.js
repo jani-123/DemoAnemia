@@ -39,7 +39,7 @@ const Notificaciones = () => {
     return (ninos.map((item, index) => {
         return (
             <div>
-                <nav className="navbar navbar-menu">
+                <nav className="navbar navbar-menu recort">
                     <div className="container-fluid">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -48,7 +48,7 @@ const Notificaciones = () => {
                                 <span className="icon-bar" />
                                 <span className="icon-bar" />
                             </button>
-                            <a className="navbar-brand title" href="#">MisChispitas</a>
+                            <a className="navbar-brand title" href="#">Mis Chispitas</a>
                         </div>
                         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul className="nav navbar-nav">

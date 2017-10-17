@@ -29,20 +29,20 @@ const Login = () => {
                                 <input type="number" className="form-control input-1" id="input-1" name="dni" placeholder="D.N.I" />
                             </div>
                             <div className="col-md-12 checket">
-                            <div className=" col-md-6 col-xs-6">
-                                <div className="form-check valida">
-                                    <label className="form-check-label">
-                                        <input type="checkbox" />Mamá
+                                <div className=" col-md-6 col-xs-6">
+                                    <div className="form-check valida">
+                                        <label className="form-check-label">
+                                            <input type="checkbox" />Mamá
                                 </label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col-sm-6 col-md-6 col-xs-6">
-                                <div className="form-check valida">
-                                    <label className="form-check-label">
-                                        <input type="checkbox" />Enfermera
+                                <div className="col-sm-6 col-md-6 col-xs-6">
+                                    <div className="form-check valida">
+                                        <label className="form-check-label">
+                                            <input type="checkbox" />Enfermera
                                 </label>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             {<NavLink to={'/welcome'} type="submit" className="btn btn-default shake" id="button">ENTRAR</NavLink>}
                         </form>
