@@ -4,6 +4,7 @@ import './home.css';
 import {
   NavLink,
 } from 'react-router-dom';
+
 const Nav = () => {
   return (
     <nav className="navbar navbar-menu sandwish">
@@ -194,17 +195,17 @@ const Calendar = () => {
 }
 
 const DaysDate = ({ item, index }) => {
-
   return (
     <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 dias test-center">
-      <span key={index} id="span" data-toggle="modal" data-target="#myModal" >{index}</span>
-      {<ModalAlert index={index}/> 
+      <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
+      {
+          <ModalAlert/>
       }
     </div>
   )
 }
 
-const ModalAlert = ({index}) =>{
+const ModalAlert = () =>{
   return(
     <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div className="modal-dialog" role="document">

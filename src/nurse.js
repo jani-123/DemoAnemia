@@ -24,82 +24,82 @@ const Reminders = () => {
 	let title = "Usuarios";
 	let recordatorios = [
 		{
-			fecha: "Maria",
+			nombre: "Maria",
 			estado: 'green'
 		},
 		{
-			fecha: "Magadalena",
+			nombre: "Magadalena",
 			estado: 'green'
 		},
 		{
-			fecha: "Frida",
+			nombre: "Frida",
 			estado: 'orange'
 		},
 		{
-			fecha: "Angelica",
+			nombre: "Angelica",
 			estado: 'green'
 		},
 		{
-			fecha: "Eva",
+			nombre: "Eva",
 			estado: 'danger'
 		},
 		{
-			fecha: "Carla",
+			nombre: "Carla",
 			estado: 'green'
 		}, {
-			fecha: "Rebeca",
+			nombre: "Rebeca",
 			estado: 'orange'
 		}, {
-			fecha: "Maria",
+			nombre: "Maria",
 			estado: 'green'
 		},
 		{
-			fecha: "Magadalena",
+			nombre: "Magadalena",
 			estado: 'green'
 		},
 		{
-			fecha: "Frida",
+			nombre: "Frida",
 			estado: 'orange'
 		},
 		{
-			fecha: "Angelica",
+			nombre: "Angelica",
 			estado: 'green'
 		},
 		{
-			fecha: "Eva",
+			nombre: "Eva",
 			estado: 'danger'
 		},
 		{
-			fecha: "Carla",
+			nombre: "Carla",
 			estado: 'green'
 		}, {
-			fecha: "Rebeca",
+			nombre: "Rebeca",
 			estado: 'orange'
 		}, {
-			fecha: "Maria",
+			nombre: "Maria",
 			estado: 'green'
 		},
 		{
-			fecha: "Magadalena",
+			nombre: "Magadalena",
 			estado: 'green'
 		},
 		{
-			fecha: "Frida",
+			nombre: "Frida",
 			estado: 'orange'
 		},
 		{
-			fecha: "Angelica",
+			nombre: "Angelica",
 			estado: 'green'
 		},
 		{
-			fecha: "Eva",
+			nombre: "Eva",
 			estado: 'danger'
 		},
 		{
-			fecha: "Carla",
+			nombre: "Carla",
 			estado: 'green'
 		}, {
-			fecha: "Rebeca",
+			nombre: "Rebeca",
 			estado: 'orange'
 		},
 	];
@@ -139,7 +139,7 @@ const Reminder = ({ item, index }) => {
 						<img src='https://s-media-cache-ak0.pinimg.com/originals/41/1b/af/411baf25085c2ea169f1458ab47b7e65.png' className="noty" />
 					</div>
 					<div className="col-xs-10">
-						<h4 className="flechitas"><b>{item.fecha}</b></h4>
+						<h4 className="flechitas"><b>{item.nombre}</b></h4>
 						<p>Hola....</p>
 					</div>
 				</div>
@@ -149,7 +149,7 @@ const Reminder = ({ item, index }) => {
 							<img src='https://s-media-cache-ak0.pinimg.com/originals/41/1b/af/411baf25085c2ea169f1458ab47b7e65.png' className="noty" />
 						</div>
 						<div className="col-xs-10">
-							<h4 className="flechitas"><b>{item.fecha}</b></h4>
+							<h4 className="flechitas"><b>{item.nombre}</b></h4>
 							<p>Hola....</p>
 						</div>
 					</div>
@@ -159,7 +159,7 @@ const Reminder = ({ item, index }) => {
 								<img src='https://s-media-cache-ak0.pinimg.com/originals/41/1b/af/411baf25085c2ea169f1458ab47b7e65.png' className="noty" />
 							</div>
 							<div className="col-xs-10">
-								<h4 className="flechitas"><b>{item.fecha}</b></h4>
+								<h4 className="flechitas"><b>{item.nombre}</b></h4>
 								<p>Hola....</p>
 							</div>
 						</div>
