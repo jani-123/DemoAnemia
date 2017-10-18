@@ -3,8 +3,7 @@ import Utils from './Utils.js';
 import './home.css';
 import {
   NavLink,
-} from 'react-router-dom'
-
+} from 'react-router-dom';
 const Nav = () => {
   return (
     <nav className="navbar navbar-menu sandwish">
@@ -13,7 +12,7 @@ const Nav = () => {
           <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span className="sr-only">Toggle navigation</span>
             <span className="icon-bar" />
-            <span className="icon-bar" />
+            <span className="icon-bar" />  
             <span className="icon-bar" />
           </button>
           <a className="navbar-brand title" href="home">MisChispitas</a>
@@ -195,41 +194,35 @@ const Calendar = () => {
 }
 
 const DaysDate = ({ item, index }) => {
-  // const eventDia = (e) => {
-  //   console.log(index);
-  //   return (
-  //     <div>
-  //       {index ?
-  //         <span key={index} id="span" data-toggle="modal" data-target="#myModal" className="color">{index}</span>
-  //         :
-  //         <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
-  //       }
-  //     </div>
-  //   )
-
-  // }
 
   return (
     <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 dias test-center">
-      <span key={index} id="span" data-toggle="modal" data-target="#myModal">{index}</span>
-      <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 className="modal-title" id="myModalLabel">Recordatorio</h4>
-            </div>
-            <div className="modal-body">
-              Recuerda Darle los micro nutrientes a tu niño #sinAnemia
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Save</button>
-            </div>
-          </div>
+      <span key={index} id="span" data-toggle="modal" data-target="#myModal" >{index}</span>
+      {<ModalAlert index={index}/> 
+      }
+    </div>
+  )
+}
+
+const ModalAlert = ({index}) =>{
+  return(
+    <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div className="modal-dialog" role="document">
+      <div className="modal-content">
+        <div className="modal-header">
+          <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 className="modal-title" id="myModalLabel">Recordatorio</h4>
+        </div>
+        <div className="modal-body">
+          Recuerda Darle los micro nutrientes a tu niño #sinAnemia
+        </div>
+        <div className="modal-footer">
+          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" className="btn btn-primary" data-dismiss="modal">Save</button>
         </div>
       </div>
     </div>
+  </div>
   )
 }
 
@@ -250,5 +243,6 @@ const Home = () => {
     </div>
   )
 }
+
 
 export default Home;
