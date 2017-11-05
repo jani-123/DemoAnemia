@@ -10,7 +10,8 @@ class Login extends Component {
 		super(props);
 		this.state = {
 			active: false,
-			user: null
+			user: null,
+			dni:48086471
 		}
 	}
 
@@ -51,15 +52,15 @@ class Login extends Component {
 							<div className="row ">
 								<div className="col-lg-12">
 									<div className="input-group buscador">
-										<div className="input-group-btn">
-											<button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User: {this.state.user}<span className="caret" /></button>
+										<div className="input-group-btn user">
+											<button type="button" className="btn btn-default dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User: {this.state.user}<span className="caret" /></button>
 											<ul className="dropdown-menu">
 												<li><a href="#" onClick={(e) => selectUsers(e)} id="Madre">Madre</a></li>
 												<li role="separator" className="divider" />
 												<li><a href="#" onClick={(e) =>  selectUsers(e)} id="Enfermera">Enfermera</a></li>
 											</ul>
 										</div>
-										<input type="text" onChange={(e) => this.getUsers(e)} className="form-control" aria-label="..." placeholder="Dni" />
+										<input type="text" onChange={(e) => this.getUsers(e)} className="form-control user" aria-label="..." placeholder="Dni" />
 									</div>
 									{
 										this.state.active ?

@@ -1,6 +1,7 @@
+body{	
+  background: -webkit-radial-gradient(#FAC104, #F04F05);
+}
 .home{
-  background-image: url('./img/gol3.jpg');
-  background: cover;
   font-family: 'Boogaloo', cursive;
 }
 .sandwish{

@@ -1,10 +1,7 @@
-*{	
-    /* font-family: 'Boogaloo', cursive; */
+body{	
+    background: -webkit-radial-gradient(#FAC104, #F04F05);
 }
 .login{
-    background-image: url('./img/gol3.jpg');
-    /* background: cover; */
-    /* background-repeat: no-repeat; */
     font-family: 'Boogaloo', cursive;
 	color: #EEE6E6;
 }
@@ -18,7 +15,7 @@
 }
 .bebe-logo{
     margin-top: 50px;
-    width: 75%;
+    width: 60%;
     border: 10px solid rgba(218, 212, 201, 0.56);
     border-radius: 50%;
 }
