@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Utils from './Utils.js';
 import './login.css';
+import * as firebase from "firebase";
 import {
 	NavLink,
 } from 'react-router-dom'
@@ -11,10 +12,9 @@ class Login extends Component {
 		this.state = {
 			active: false,
 			user: null,
-			dni:48086471
 		}
 	}
-
+  
 	getUsers(e) {
 		if ((e.target.value.length === 8 && this.state.user === 'Madre' || e.target.value.length === 8 && this.state.user === 'Enfermera')) {
 			this.setState({
@@ -27,7 +27,7 @@ class Login extends Component {
 			});
 		}
 	}
-
+	
 	render() {		
 		const selectUsers = (e) => {
 			let n = e.currentTarget.id;
@@ -36,6 +36,7 @@ class Login extends Component {
 				user: n
 			})
 		}
+
 		return (
 			<center>
 				<div className="container login">
@@ -55,7 +56,7 @@ class Login extends Component {
 										<div className="input-group-btn user">
 											<button type="button" className="btn btn-default dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User: {this.state.user}<span className="caret" /></button>
 											<ul className="dropdown-menu">
-												<li><a href="#" onClick={(e) => selectUsers(e)} id="Madre">Madre</a></li>
+												<li><a href="#" onClick={(e) => selectUsers(e)} id="Madre" defaultValue="Madre">Madre</a></li>
 												<li role="separator" className="divider" />
 												<li><a href="#" onClick={(e) =>  selectUsers(e)} id="Enfermera">Enfermera</a></li>
 											</ul>
